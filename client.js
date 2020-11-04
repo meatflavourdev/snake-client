@@ -10,6 +10,7 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
+  conn.write("Name: JER");
   conn.on('data', (data) =>{
     console.log(data);
   });
