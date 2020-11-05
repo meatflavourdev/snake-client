@@ -1,3 +1,4 @@
+// client.js
 const net = require('net');
 
 /**
@@ -11,6 +12,11 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.write("Name: JER");
+
+/*   setInterval(() => {
+    conn.write("Move: up");
+  }, 50); */
+
   conn.on('data', (data) =>{
     console.log(data);
   });
